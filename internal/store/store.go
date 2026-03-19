@@ -31,8 +31,8 @@ type Project struct {
 
 type Store struct {
 	mu       sync.RWMutex
-	users    map[string]*User
-	projects map[string]*Project
+	users    map[string]*User    // key : userId
+	projects map[string]*Project // key : projectId
 }
 
 func New() *Store {
